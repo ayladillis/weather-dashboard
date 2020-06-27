@@ -14,27 +14,66 @@
     <title>Weather Dashboard</title>
   </head>
   <body>
+<!-- header -->
     <div class="jumbotron">
-        <!-- <div class="container"> -->
           <h2 class="display-4">Weather Dashboard</h2>
-        <!-- </div> -->
       </div>
-    <!-- city searchbar -->
-    <div class="row">
-        <div class="col-4">
+<!-- search bar -->
+      <div class="row">
+<!-- begining of column 1-->
+        <div class="col-sm-4">
         <h1 style=" color: rgb(39, 39, 39)">Search for a City:</h1>
-      <form class="city-search" style="margin:auto;max-width:300px">
-        <input type="text" placeholder="Search.." name="search2">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
+        <form class="city-search" style="margin:auto;max-width:300px">
+          <input type="text" placeholder="Search.." name="search2">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+        <br>
+        <div class="card">
+          <div class="city-results">
+            
+          </div>
+        </div>
     </div>
+<!-- five day weather forcast -->
+<!-- begining of column 2-->
+        <div class="col-sm-8">
+    <!-- first row of column 2-->
+    <div class="row-8">
+        <div class="card">
+            <div class="weather-info">
+              
+            </div>
+          </div>
+</div>
+<h2>5-Day Forecast:</h2>
+<!-- second row of column 2-->
+     <div class="row-8">
+      <!-- box one -->
+        <div id="weather-forcast" class="card text-white bg-primary">
+          <div class="weather-one">
+              <p class="card-text"></p>
+     </div>
+     </div>
+
+     
+
+
+
+
+
+
+
+     <!-- <div id="weather-forcast" class="card text-white bg-primary w-50">
+              <div class="card-body">
+                  <p class="card-text"></p>
+         </div>
+         </div> -->
+
     </div>
+   </div>
 
-
-
-    
-
-
+  </div>
+  
 
 
 

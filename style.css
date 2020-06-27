@@ -1,6 +1,8 @@
-body {
-    font-family: Arial, sans-serif;
-}
+/* html,body{
+  height: 100%;
+    margin: 0; padding: 0; border: none;
+  } */
+
 
 .jumbotron {
     background-color: rgb(39, 39, 39);
@@ -15,10 +17,24 @@ h1 {
     text-align: center;
     font-weight: bolder;
 }
-.col-4 {
+h2 {
+  font-size: x-large;
+}
+.col-sm-4 {
     background-color: rgb(238, 238, 238);
 }
 
+.city-results {
+  height: 13cm;
+}
+
+.weather-info {
+  height: 7cm;
+}
+
+.weather-one {
+  height: 5cm;
+}
 
   * {
     box-sizing: border-box;
@@ -54,3 +70,15 @@ h1 {
     clear: both;
     display: table;
   }
+
+  .row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .block {
+    width: 100px;
+  }
+
+  
