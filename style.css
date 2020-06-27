@@ -1,5 +1,5 @@
 body {
-    font-family: Helvetica;
+    font-family: Arial, sans-serif;
 }
 
 .jumbotron {
@@ -10,3 +10,47 @@ body {
     color: white;
    
 }
+h1 {
+    font-size: large;
+    text-align: center;
+    font-weight: bolder;
+}
+.col-4 {
+    background-color: rgb(238, 238, 238);
+}
+
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  form.city-search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  form.city-search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  form.city-search button:hover {
+    background: #0b7dda;
+  }
+  
+  form.city-search::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
