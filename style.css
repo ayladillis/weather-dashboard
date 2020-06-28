@@ -26,14 +26,51 @@ h2 {
 
 .city-results {
   height: 13cm;
+  text-align: left;
 }
 
 .weather-info {
   height: 7cm;
 }
 
+.forcast-results > * {
+  display: inline-block;
+}
+
 .weather-one {
-  height: 5cm;
+  background-color: #2196F3;
+  width: 180px;
+  height: 215px;
+  border-radius: 10px;
+  text-align: center;
+}
+.weather-two {
+  background-color: #2196F3;
+  width: 180px;
+  height: 215px;
+  border-radius: 10px;
+  text-align: center;
+}
+.weather-three {
+  background-color: #2196F3;
+  width: 180px;
+  height: 215px;
+  border-radius: 10px;
+  text-align: center;
+}
+.weather-four {
+  background-color: #2196F3;
+  width: 180px;
+  height: 215px;
+  border-radius: 10px;
+  text-align: center;
+}
+.weather-five {
+  background-color: #2196F3;
+  width: 180px;
+  height: 215px;
+  border-radius: 10px;
+  text-align: center;
 }
 
   * {
@@ -80,5 +117,6 @@ h2 {
   .block {
     width: 100px;
   }
+
 
   
