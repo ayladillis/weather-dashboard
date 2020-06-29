@@ -15,3 +15,27 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
 ## Psudocode 
+
+Step 1:
+Q: How will the user search for cities? 
+A: by inputting text into the search bar and clicking search
+Q: Where will the city name go? 
+A: every city searched will be prepended beneath the search bar
+Q: How will the cities be saved?
+A: with local storage
+Q: how will it be known what city will be displayed?
+A: with an .on('click') function
+
+Step 2:
+Q: How will the daily weather forcast be called?
+A: by using the ajax function to retreive the information from the library
+Q: what information will be called?
+A: city's name, humidity, wind-speed and UV index
+Q: how will it be displayed?
+A: by pushing the array onto the card in the second row
+
+Step 3:
+Q: How will the five day weather forcast be called?
+A: with an ajax function then an array 
+Q: What box will go with what day?
+A: each box will be set with a seperate div tag coorisponding to one of five days
