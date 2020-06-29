@@ -21,12 +21,13 @@
 <!-- search bar -->
       <div class="row">
 <!-- begining of column 1-->
+<!-- search bar and button -->
         <div class="col-sm-4">
         <h1 style=" color: rgb(39, 39, 39)">Search for a City:</h1>
         <div class="input">
         <form class="city-search" style="margin:auto;max-width:300px">
           <input class="inputValue" type="text" name="search2">
-          <button class="button" type="submit" value="Submit"><i class="fa fa-search"></i></button>
+          <button id="search" type="submit" value="Submit"><i class="fa fa-search"></i></button>
         </form>
         </div>
 <!-- search results -->
@@ -42,19 +43,21 @@
     <!-- first row of column 2-->
     <div class="row-8">
       <!-- one day weather forcast -->
-           
+           <div class="city-info">
               <div class="card">
                   <h3 class="name"></h3>
                   <p class="humidity"></p>
                   <p class="wind-speed"></p>
                   <p class="uv-index"></p>
               </div>
+            </div>
         
 </div>
+<!-- second row of column 2-->
 <br>
 <!-- five day weather forcast -->
 <h2>5-Day Forecast:</h2>
-<!-- second row of column 2-->
+
      <div class="row-8">
        <div class="forcast-results">
       <!-- box one -->
