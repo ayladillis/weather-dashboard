@@ -1,41 +1,58 @@
-# weather-dashboard
-homework 06
+# Weather-Dashboard
 
-## Criteria 
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
+Learning to work with APIs
 
-## Psudocode 
+## Tools
 
-Step 1:
-Q: How will the user search for cities? 
-A: by inputting text into the search bar and clicking search
-Q: Where will the city name go? 
-A: every city searched will be prepended beneath the search bar
-Q: How will the cities be saved?
-A: with local storage
-Q: how will it be known what city will be displayed?
-A: with an .on('click') function
+* OpenWeatherMap
+* Zoom
+* Slack
+* GitHub
+* GitLab
+* BootCamp Code Drills
+* Slack Overflow
+* Google
+* Youtube
+* w3School
+* MDN Webdocs
+* Ramon Sanchez (my tutor)
 
-Step 2:
-Q: How will the daily weather forcast be called?
-A: by using the ajax function to retreive the information from the library
-Q: what information will be called?
-A: city's name, humidity, wind-speed and UV index
-Q: how will it be displayed?
-A: by pushing the array onto the card in the second row
 
-Step 3:
-Q: How will the five day weather forcast be called?
-A: with an ajax function then an array 
-Q: What box will go with what day?
-A: each box will be set with a seperate div tag coorisponding to one of five days
+## Screenshots
+
+* a split screen image of my html and javascript where I am attempting to display the weather details such as humidity, wind-speed and city name using div tags linking to my jquery. 
+
+<img src="screenshot.png" alt="my code">
+
+## Code Snippets
+
+* using the 16-all-together activity form class I attempted to get my search button working, I need to work on learning when and where to use jquery. 
+
+   $("#search").on("click", function(event){
+    event.preventDefault();
+    $("#city-info").empty();
+    $(".city-button").removeClass("active");
+    $(this).addClass("active");
+
+    console.log("button clicked")
+    populateButtons();
+
+* I was able to get my OpenWeatherMap API to show in my console however not on my browser page, I am glade I was able to figure out how to add the queryURL with my key now I just need a differrent approach when trying to figure out backend! 
+
+ var cityName = cities[ 0 ]
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName +"&units=imperial&appid=6d62c1e57554dc6cee60932bdfd78a07"
+
+
+## Deploy Link
+
+* [Click for Live Site](https://ayladillis.github.io/weather-dashboard/)
+
+## Authors 
+
+Ayla Dillis
+
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScrip)
+* [JQuery](https://jquery.com/)
+* [OpenWeatherMap](https://openweathermap.org/)

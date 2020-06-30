@@ -12,8 +12,7 @@ $(document).ready(function () {
 
     }
 
-// function to make button.links and add to page
-// arrayToUse looks at animal array
+// function to make buttons and add to page
     function populateButtons() {
         $(citybutton).empty();
     
@@ -30,7 +29,6 @@ $(document).ready(function () {
   // once search button is clicked do the following  
    $("#search").on("click", function(event){
     event.preventDefault();
-
     $("#city-info").empty();
     $(".city-button").removeClass("active");
     $(this).addClass("active");
@@ -40,46 +38,40 @@ $(document).ready(function () {
 
     var type = $(this).attr("data-type");
 //city name is extracted from array
-    var cityName = "Orlando"
+    var cityName = cities[0]
     var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName +"&units=imperial&appid=6d62c1e57554dc6cee60932bdfd78a07"
 
         $.ajax({
             url: queryURL,
             method: "GET"
-        })
+        }).then(function(response) {
 
-   
-        .then(function(response){
             console.log("response", response)
+            var results = response.data;
+
+            for (var i = 0; i < results; i++) {
+                $(".name").html("<h3>" + response.name + "</h3>");
+                $(".humidity").text("Humidity: " + response.main.humidity);
+                var windSpeed = response.wind.speed;
+                $(".wind-speed").html("<p>Wind Speed: " +  windSpeed + "</p>");
+
+                console.log("Humidity: " + response.main.humidity);
+                console.log("Wind Speed " + response.wind.speed);
+            }
+
 
         });
 
+        populateButtons(cities, "city-buttons", "#city-buttons")
    })
       
-
+   populateButtons(cities, "city-buttons", "#city-buttons")
 
 });
 
 
 
-// var button = document.querySelector(".button")
-// var inputValue = document.querySelector(".inputValue")
 
-// var name = document.querySelector(".name");
-// var humidity = document.querySelector(".humidity");
-// var windSpeed = document.querySelector(".wind-speed");
-// var uvIndex = document.querySelector(".uv-index");
-
-// $(".button").on("click", function(event) {
-//     event.preventDefault();
-//     var newCity = $("button").eq(0).val();
-
-//     if (newCity.length > 2) {
-//         city.push(newCity);
-//     }
-
-//     populateButtons(city, "button", ".button");
-// });
 
 
 
