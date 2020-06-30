@@ -1,6 +1,6 @@
 # Weather-Dashboard
 
-Learning to work with APIs
+Learning to work with APIs using the Open Weather Maps site!
 
 ## Tools
 
@@ -23,6 +23,10 @@ Learning to work with APIs
 * a split screen image of my html and javascript where I am attempting to display the weather details such as humidity, wind-speed and city name using div tags linking to my jquery. 
 
 <img src="screenshot.png" alt="my code">
+
+* I'm really happy with how my front end turned out!
+
+<img src="screenshot2.png" alt="my code">
 
 ## Code Snippets
 

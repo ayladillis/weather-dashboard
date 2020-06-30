@@ -62,10 +62,10 @@ $(document).ready(function () {
 
         });
 
-        populateButtons(cities, "city-buttons", "#city-buttons")
+        // populateButtons(cities, "city-buttons", "#city-buttons")
    })
       
-   populateButtons(cities, "city-buttons", "#city-buttons")
+//    populateButtons(cities, "city-buttons", "#city-buttons")
 
 });
 
