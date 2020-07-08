@@ -1,14 +1,11 @@
 $(document).ready(function () {
     var citybutton = document.getElementById("#city-button");
-
-    var cities = [
-        "Orlando"
-    ];
+    
+    var cities = [ ];
 
     function retriveArray(){
 
     var cities = localStorage.getItem("cities");
-
 
     }
 
@@ -25,21 +22,29 @@ $(document).ready(function () {
         }
     
       }
+      function saveCities(){
+          localStorage.setItem("cities", JSON.stringify);
+      }
 
   // once search button is clicked do the following  
    $("#search").on("click", function(event){
+    cities = [ ];
+    saveCities()
     event.preventDefault();
     $("#city-info").empty();
     $(".city-button").removeClass("active");
     $(this).addClass("active");
 
-    console.log("button clicked")
+    // console.log("button clicked")
+    let city = document.querySelector("#city-text").value
+    console.log(city);
+
     populateButtons();
 
     var type = $(this).attr("data-type");
 //city name is extracted from array
     var cityName = cities[0]
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName +"&units=imperial&appid=6d62c1e57554dc6cee60932bdfd78a07"
+    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city +"&units=imperial&appid=6d62c1e57554dc6cee60932bdfd78a07"
 
         $.ajax({
             url: queryURL,
@@ -47,25 +52,31 @@ $(document).ready(function () {
         }).then(function(response) {
 
             console.log("response", response)
-            var results = response.data;
+            var windSpeed = response.wind.speed;
 
-            for (var i = 0; i < results; i++) {
-                $(".name").html("<h3>" + response.name + "</h3>");
-                $(".humidity").text("Humidity: " + response.main.humidity);
-                var windSpeed = response.wind.speed;
-                $(".wind-speed").html("<p>Wind Speed: " +  windSpeed + "</p>");
+                $("#name").html("<h2>" + response.name + "</h2>");
+                $("#humidity").text("Humidity: " + response.main.humidity);
+                $("#wind-speed").html("<p>Wind Speed: " +  windSpeed + "</p>");
 
                 console.log("Humidity: " + response.main.humidity);
                 console.log("Wind Speed " + response.wind.speed);
+
+                return response; 
+            
+
+        }).then(function(response){
+            console.log("hello world", response);
+
+            for(i = 0; i < 5; i++){
+                //insert 5 cards here!
             }
 
+        })
 
-        });
-
-        // populateButtons(cities, "city-buttons", "#city-buttons")
+       
    })
       
-//    populateButtons(cities, "city-buttons", "#city-buttons")
+
 
 });
 
