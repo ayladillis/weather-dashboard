@@ -23,8 +23,10 @@ $(document).ready(function () {
     
       }
       function saveCities(){
-          localStorage.setItem("cities", JSON.stringify);
+          localStorage.setItem("cities", JSON.stringify(cities));
       }
+      
+      //render cities function to get cities back out of local storage
 
   // once search button is clicked do the following  
    $("#search").on("click", function(event){
